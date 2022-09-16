@@ -2,9 +2,9 @@
 npm install react-hook-form yup @hookform/resolver/yup
 ```
 
-## read the command to implement
+### read the command to implement
 
-#first import all thing in form.js
+###first import all thing in form.js
 
 ```
 import { useForm } from "react-hook-form";
@@ -12,7 +12,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 ```
 
-#second create schema
+##second create schema
 
 ```
 const schema = yup.object().shape({
@@ -25,7 +25,7 @@ const schema = yup.object().shape({
 });
 ```
 
-#third create form functions and input schema to yup resolver
+##third create form functions and input schema to yup resolver
 
 ```
 function Form() {
@@ -34,7 +34,7 @@ function Form() {
   });
 ```
 
-#four create a submit function to get the input data
+##four create a submit function to get the input data
 
 ```
   const submitForm = (data) => {
@@ -42,7 +42,7 @@ function Form() {
   };
 ```
 
-#five add ref to each input field with register in input
+##five add ref to each input field with register in input
 
 ```
 <input
@@ -53,13 +53,13 @@ function Form() {
           />
 ```
 
-#six add handleSubmit to the form wit submit functions
+##six add handleSubmit to the form wit submit functions
 
 ```
 <form onSubmit={handleSubmit(submitForm)}>
 ```
 
-#seven add error message (important notice. confirmPassword does not show the error message so in this case we have to use custom message)
+##seven add error message (important notice. confirmPassword does not show the error message so in this case we have to use custom message)
 
 ```
 <p> {errors.confirmPassword && "Passwords Should Match!"} </p>
